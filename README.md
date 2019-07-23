@@ -1,5 +1,7 @@
-## Prerequisites
-- java 8 for executing the jar file.
+## General
+- Java 8
+- Lombok Plugin is used for convenience
+
 
 ##What's provided?
 - In the project root you can find a jar file of the version 1.0. See section **Execute** to get help on executing it.
@@ -10,7 +12,7 @@
 
 To execute the jar file you have to pass two parameters:
 1. Absolute path to the csv file on which you want to apply the ID3-algorithm
-2. The index of the column, which determine the target values (starting from 0)
+2. The index of the column, which determine the target values (e.g. in the provided csv it is column 0)
 
 Example call:
 
