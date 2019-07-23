@@ -1,4 +1,7 @@
 ## General
+This is my implementation of the ID3 algorithm in Java. 
+After the algorithm got executed the generated tree will be printed on the std out.
+
 - Java 8
 - Lombok Plugin is used for convenience
 

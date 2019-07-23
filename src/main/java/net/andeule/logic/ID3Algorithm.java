@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class ID3Algorithmn {
+public class ID3Algorithm {
 
 
     /**
@@ -29,7 +29,7 @@ public class ID3Algorithmn {
         //Explanation: if we are in one branch we add indexes to the list with each recursive call. When this branch is finished we should not have the added index from the last branch in our list.
         List<Integer> deepCopyOfIndexOfTakenOutAttributes = new ArrayList<>(indexOfTakenOutAttributes);
 
-        int indexOfBestInformationGainAttribute = InformationGainAlgorithmn.getIndexOfAttributeWithHighestInformationGain(trainingExample, deepCopyOfIndexOfTakenOutAttributes);
+        int indexOfBestInformationGainAttribute = InformationGainAlgorithm.getIndexOfAttributeWithHighestInformationGain(trainingExample, deepCopyOfIndexOfTakenOutAttributes);
         Node<String> root = new Node<>(trainingExample.getHeadline().getAttributes().get(indexOfBestInformationGainAttribute), parent, branchLabel);
         if (allExampleTargetValueAreIdentical(trainingExample)) {
             return new Node<String>(trainingExample.getExampleRowList().get(0).getAttributes().get(trainingExample.getHeadline().getColumnIndexOfTargetValue()), parent, branchLabel);

@@ -10,7 +10,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InformationGainAlgorithmnTestWithPlayTennisExample {
+public class InformationGainAlgorithmTestWithPlayTennisExample {
 
 
     private TrainingExample trainingExample;
@@ -37,9 +37,9 @@ public class InformationGainAlgorithmnTestWithPlayTennisExample {
 
     @Test
     public void testInformationGain(){
-        Assert.assertEquals(0.246,InformationGainAlgorithmn.calculateInformationGain(trainingExample,0),0.001);
-        Assert.assertEquals(0.151,InformationGainAlgorithmn.calculateInformationGain(trainingExample,2),0.001);
-        Assert.assertEquals(0.048,InformationGainAlgorithmn.calculateInformationGain(trainingExample,3),0.001);
-        Assert.assertEquals(0.029,InformationGainAlgorithmn.calculateInformationGain(trainingExample,1),0.001);
+        Assert.assertEquals(0.246, InformationGainAlgorithm.calculateInformationGain(trainingExample,0),0.001);
+        Assert.assertEquals(0.151, InformationGainAlgorithm.calculateInformationGain(trainingExample,2),0.001);
+        Assert.assertEquals(0.048, InformationGainAlgorithm.calculateInformationGain(trainingExample,3),0.001);
+        Assert.assertEquals(0.029, InformationGainAlgorithm.calculateInformationGain(trainingExample,1),0.001);
     }
 }

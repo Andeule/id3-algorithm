@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class InformationGainAlgorithmn {
+public class InformationGainAlgorithm {
 
     public static int DEVIDE_SCALE = 30;
 

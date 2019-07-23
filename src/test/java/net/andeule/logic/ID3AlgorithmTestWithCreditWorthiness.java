@@ -11,7 +11,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ID3AlgorithmnTestWithCreditWorthiness {
+public class ID3AlgorithmTestWithCreditWorthiness {
 
     TrainingExample trainingExample;
 
@@ -33,14 +33,14 @@ public class ID3AlgorithmnTestWithCreditWorthiness {
 
     @Test
     public void testExtractSubset(){
-        TrainingExample subset= ID3Algorithmn.extractSubSetByAnAttribute(trainingExample,1,"old");
+        TrainingExample subset= ID3Algorithm.extractSubSetByAnAttribute(trainingExample,1,"old");
         Assert.assertEquals(4,subset.getExampleRowList().size());
     }
 
     @Test
     public void testGetDecisionAttributesOfA(){
-        int index = InformationGainAlgorithmn.getIndexOfAttributeWithHighestInformationGain(trainingExample, new ArrayList<>());
-        List<String> decisionAttributesOfA = ID3Algorithmn.getPossibleValuesOfA(trainingExample, index);
+        int index = InformationGainAlgorithm.getIndexOfAttributeWithHighestInformationGain(trainingExample, new ArrayList<>());
+        List<String> decisionAttributesOfA = ID3Algorithm.getPossibleValuesOfA(trainingExample, index);
         Assert.assertEquals(3, decisionAttributesOfA.size());
         List<String> expectedList = new ArrayList<>();
         expectedList.add("average");
@@ -51,7 +51,7 @@ public class ID3AlgorithmnTestWithCreditWorthiness {
 
     @Test
     public void testAllTargetValuesAreSame(){
-        boolean same = ID3Algorithmn.allExampleTargetValueAreIdentical(trainingExample);
+        boolean same = ID3Algorithm.allExampleTargetValueAreIdentical(trainingExample);
         Assert.assertFalse(same);
 
 
@@ -61,13 +61,13 @@ public class ID3AlgorithmnTestWithCreditWorthiness {
         exampleRows.add(new TrainingExampleRow(0, "high", "average", "clerk", "sufficient"));
         TrainingExample trainingExampleWithSameTargetValue = new TrainingExample(new TrainingExampleHeadline(0, "worthy", "age", "occupation", "security"), exampleRows);
 
-        same = ID3Algorithmn.allExampleTargetValueAreIdentical(trainingExampleWithSameTargetValue);
+        same = ID3Algorithm.allExampleTargetValueAreIdentical(trainingExampleWithSameTargetValue);
         Assert.assertTrue(same);
     }
 
     @Test
     public void testID3(){
-        Node tree = ID3Algorithmn.execute(trainingExample,new ArrayList<>(), null, "");
+        Node tree = ID3Algorithm.execute(trainingExample,new ArrayList<>(), null, "");
         tree.print();
 
     }

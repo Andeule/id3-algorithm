@@ -10,7 +10,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InformationGainAlgorithmnTestWithCreditWorthiness {
+public class InformationGainAlgorithmTestWithCreditWorthiness {
     TrainingExample trainingExample;
 
     @Before
@@ -31,28 +31,28 @@ public class InformationGainAlgorithmnTestWithCreditWorthiness {
 
     @Test
     public void testOriginalEntropy() {
-        Assert.assertEquals(1.5709505944546684, InformationGainAlgorithmn.calculateOriginalEntropy(trainingExample), 0.0001);
+        Assert.assertEquals(1.5709505944546684, InformationGainAlgorithm.calculateOriginalEntropy(trainingExample), 0.0001);
     }
 
     @Test
     public void testRelativeEntropy() {
-        double relativeEntropy = InformationGainAlgorithmn.calculateRelativeEntropy(trainingExample, 1);
+        double relativeEntropy = InformationGainAlgorithm.calculateRelativeEntropy(trainingExample, 1);
         Assert.assertEquals(1.0754744789463977, relativeEntropy, 0.0001);
     }
 
     @Test
     public void testInformationGainOfAge() {
-        double informationGain = InformationGainAlgorithmn.calculateInformationGain(trainingExample, 1);
+        double informationGain = InformationGainAlgorithm.calculateInformationGain(trainingExample, 1);
         Assert.assertEquals(0.4955, informationGain, 0.001);
     }
 
     @Test
     public void testInformationGainOfOccupation() {
-        double informationGain = InformationGainAlgorithmn.calculateInformationGain(trainingExample, 2);
+        double informationGain = InformationGainAlgorithm.calculateInformationGain(trainingExample, 2);
     }
 
     @Test
     public void testInformationGainOfSecurity() {
-        double informationGain = InformationGainAlgorithmn.calculateInformationGain(trainingExample, 3);
+        double informationGain = InformationGainAlgorithm.calculateInformationGain(trainingExample, 3);
     }
 }

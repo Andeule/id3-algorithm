@@ -1,7 +1,7 @@
 package net.andeule.boundary;
 
 import net.andeule.logic.CSVMapper;
-import net.andeule.logic.ID3Algorithmn;
+import net.andeule.logic.ID3Algorithm;
 import net.andeule.model.Node;
 import net.andeule.model.TrainingExample;
 
@@ -32,7 +32,7 @@ public class ID3Main {
             System.out.printf("Passed index was: %d. Therefore the target column is: %s%n", indexOfTargetValule, trainingExample.getHeadline().getAttributes().get(indexOfTargetValule));
             System.out.println("ID3-Algorithmn started");
 
-            Node tree = ID3Algorithmn.execute(trainingExample, new ArrayList<>(), null, "");
+            Node tree = ID3Algorithm.execute(trainingExample, new ArrayList<>(), null, "");
             System.out.println("Printing result:");
             tree.print();
         }

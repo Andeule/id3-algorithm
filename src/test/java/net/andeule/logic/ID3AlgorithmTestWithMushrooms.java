@@ -8,7 +8,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ID3AlgorithmnTestWithMushrooms {
+public class ID3AlgorithmTestWithMushrooms {
 
     TrainingExample trainingExample;
     @Before
@@ -20,7 +20,7 @@ public class ID3AlgorithmnTestWithMushrooms {
 
     @Test
     public void testID3(){
-        Node tree = ID3Algorithmn.execute(trainingExample,new ArrayList<>(), null, "");
+        Node tree = ID3Algorithm.execute(trainingExample,new ArrayList<>(), null, "");
         tree.print();
     }
 
