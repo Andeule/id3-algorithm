@@ -1,5 +1,6 @@
 ## General
-This is my implementation of the ID3 algorithm in Java. 
+This is my implementation of the ID3 algorithm in Java. It uses Entropy to calculate the Information Gain.
+
 After the algorithm got executed the generated tree will be printed on the std out.
 
 - Java 8
